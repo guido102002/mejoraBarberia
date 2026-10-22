@@ -1,251 +1,191 @@
 <!DOCTYPE html>
-<html lang="es" data-bs-theme="dark">
+<html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbería Estilo Urbano | Contacto</title>
+    <meta name="description" content="Escríbenos, llámanos o reserva tu cita en Barbería Estilo Urbano.">
 
-    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap"
-        rel="stylesheet">
-
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body class="pagina-contacto">
-    <!-- ENCABEZADO + NAVBAR DE BOOTSTRAP -->
-    <header class="sticky-top">
-        <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Menú principal">
-            <div class="container">
 
-                <div class="marca">
-                    <h1>Barbería Estilo Urbano</h1>
-                    <p>Tu estilo, tu personalidad, tu mejor versión.</p>
-                </div>
+    <!-- ENCABEZADO (misma estructura que Inicio) -->
+    <header>
+        <div class="marca">
+            <h1>Barbería Estilo Urbano</h1>
+            <p>Tu estilo, tu personalidad, tu mejor versión.</p>
+        </div>
 
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuPrincipal"
-                    aria-controls="menuPrincipal" aria-expanded="false" aria-label="Abrir o cerrar el menú">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse justify-content-md-end" id="menuPrincipal">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link" href="index.html">Inicio</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="index-somos.html">Quiénes somos</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active" href="contacto.html" aria-current="page">Contacto</a>
-                        </li>
-                    </ul>
-                </div>
-
-            </div>
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index-somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            </ul>
         </nav>
     </header>
 
+    <!-- CONTENIDO PRINCIPAL -->
     <main>
+
+        <!-- PRESENTACIÓN DE CONTACTO -->
         <section class="portada">
-            <div class="container text-center">
+            <div class="contenedor">
                 <p class="etiqueta">Contacto</p>
                 <h2>Hablemos de tu <em>próximo corte</em></h2>
-                <p class="intro mx-auto col-lg-8">
+                <p class="intro">
                     ¿Quieres reservar una cita, resolver una duda o conocer más
                     sobre nuestros servicios? Escríbenos o llámanos y te
                     responderemos lo antes posible.
                 </p>
-                <div class="d-flex justify-content-center gap-3 mt-4">
-                    <a class="btn btn-dorado" href="#formulario">Escribir un mensaje</a>
-                    <a class="btn btn-outline-light px-4" href="tel:+573000000000">Llamar ahora</a>
+                <div class="acciones">
+                    <a class="boton boton-dorado" href="#formulario">Escribir un mensaje</a>
+                    <a class="boton boton-borde" href="tel:+573000000000">Llamar ahora</a>
                 </div>
             </div>
         </section>
 
+        <!-- MEDIOS DE CONTACTO -->
         <section class="medios">
-            <div class="container">
+            <div class="contenedor">
                 <p class="etiqueta">Dónde encontrarnos</p>
                 <h2>Elige cómo comunicarte</h2>
 
-                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4 mt-2">
-                    <div class="col">
-                        <article class="card tarjeta h-100">
-                            <div class="card-body">
-                                <h3 class="card-title h5">Correo electrónico</h3>
-                                <p class="card-text"><a href="mailto:contacto@estilourbano.example"
-                                        class="text-decoration-none">contacto@estilourbano.example</a></p>
-                                <p class="card-text text-muted small">Respondemos en menos de 24 horas.</p>
-                            </div>
-                        </article>
-                    </div>
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Correo electrónico</h3>
+                        <p><a href="mailto:contacto@estilourbano.example">contacto@estilourbano.example</a></p>
+                        <p class="nota">Respondemos en menos de 24 horas.</p>
+                    </article>
 
-                    <div class="col">
-                        <article class="card tarjeta h-100">
-                            <div class="card-body">
-                                <h3 class="card-title h5">Teléfono</h3>
-                                <p class="card-text"><a href="tel:+573000000000" class="text-decoration-none">+57 300
-                                        000 0000</a></p>
-                                <p class="card-text text-muted small">Para reservas y consultas rápidas.</p>
-                            </div>
-                        </article>
-                    </div>
+                    <article class="tarjeta">
+                        <h3>Teléfono</h3>
+                        <p><a href="tel:+573000000000">+57 300 000 0000</a></p>
+                        <p class="nota">Para reservas y consultas rápidas.</p>
+                    </article>
 
-                    <div class="col">
-                        <article class="card tarjeta h-100">
-                            <div class="card-body">
-                                <h3 class="card-title h5">WhatsApp</h3>
-                                <p class="card-text"><a href="https://wa.me/573000000001"
-                                        class="text-decoration-none">+57 300 000 0001</a></p>
-                                <p class="card-text text-muted small">Escríbenos cuando quieras.</p>
-                            </div>
-                        </article>
-                    </div>
+                    <article class="tarjeta">
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/573000000001">+57 300 000 0001</a></p>
+                        <p class="nota">Escríbenos cuando quieras.</p>
+                    </article>
 
-                    <div class="col">
-                        <article class="card tarjeta h-100">
-                            <div class="card-body">
-                                <h3 class="card-title h5">Dirección</h3>
-                                <p class="card-text">Calle 00 # 00-00, Local 1</p>
-                                <p class="card-text text-muted small">Ciudad, Colombia (dirección de ejemplo).</p>
-                            </div>
-                        </article>
-                    </div>
+                    <article class="tarjeta">
+                        <h3>Dirección</h3>
+                        <p>Calle 00 # 00-00, Local 1</p>
+                        <p class="nota">Ciudad, Colombia (dirección de ejemplo).</p>
+                    </article>
                 </div>
             </div>
         </section>
 
+        <!-- FORMULARIO Y HORARIOS -->
         <section class="formulario-seccion" id="formulario">
-            <div class="container">
-                <div class="row g-5">
-                    <!--Formulario-->
-                    <div class="col-lg-7">
-                        <p class="etiqueta">Escríbenos</p>
-                        <h2>Envíanos un mensaje</h2>
-                        <p class="intro">
-                            Cuéntanos qué servicio te interesa y en qué horario
-                            prefieres venir. Nosotros te confirmamos la cita.
-                        </p>
+            <div class="contenedor dos-columnas">
 
-                        <form action="#" method="post" class="mt-4">
-                            <div class="mb-3">
-                                <label for="nombre" class="form-label">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre"
-                                    placeholder="Tu nombre" required>
-                            </div>
+                <div>
+                    <p class="etiqueta">Escríbenos</p>
+                    <h2>Envíanos un mensaje</h2>
+                    <p class="intro">
+                        Cuéntanos qué servicio te interesa y en qué horario
+                        prefieres venir. Nosotros te confirmamos la cita.
+                    </p>
 
-                            <div class="mb-3">
-                                <label for="correo" class="form-label">Correo electrónico</label>
-                                <input type="email" class="form-control" id="correo" name="correo"
-                                    placeholder="tucorreo@ejemplo.com" required>
-                            </div>
-
-                            <div class="mb-3">
-                                <label for="servicio" class="form-label">Servicio de interés</label>
-                                <select id="servicio" name="servicio" class="form-select">
-                                    <option value="corte">Corte de cabello</option>
-                                    <option value="barba">Arreglo y diseño de barba</option>
-                                    <option value="afeitado">Afeitado clásico</option>
-                                    <option value="otro">Otro</option>
-                                </select>
-                            </div>
-
-                            <div class="mb-4">
-                                <label for="mensaje" class="form-label">Mensaje</label>
-                                <textarea id="mensaje" name="mensaje" class="form-control" rows="4"
-                                    placeholder="Escribe tu mensaje aquí" required></textarea>
-                            </div>
-
-                            <button type="submit" class="btn btn-dorado">Enviar mensaje</button>
-                        </form>
-                    </div>
-
-                    <!-- Columna Horarios y Preguntas Frecuentes -->
-                    <div class="col-lg-5">
-                        <div class="p-4 rounded border bg-card-custom">
-                            <h3 class="h4 mb-3">Horario de atención</h3>
-                            <dl class="row mb-4">
-                                <dt class="col-7">Lunes a viernes</dt>
-                                <dd class="col-5 text-end">9:00 a. m. – 8:00 p. m.</dd>
-                                <dt class="col-7">Sábados</dt>
-                                <dd class="col-5 text-end">9:00 a. m. – 6:00 p. m.</dd>
-                                <dt class="col-7">Domingos</dt>
-                                <dd class="col-5 text-end">10:00 a. m. – 3:00 p. m.</dd>
-                            </dl>
-
-                            <h3 class="h4 mb-3">Preguntas frecuentes</h3>
-
-                            <details class="mb-2 p-2 rounded">
-                                <summary class="fw-medium">¿Necesito reservar cita?</summary>
-                                <p class="small mt-2 mb-0 text-muted">Recomendamos reservar, pero también atendemos por
-                                    orden de llegada.</p>
-                            </details>
-
-                            <details class="mb-2 p-2 rounded">
-                                <summary class="fw-medium">¿Cuánto dura un corte?</summary>
-                                <p class="small mt-2 mb-0 text-muted">Entre 30 y 45 minutos, según el estilo que elijas.
-                                </p>
-                            </details>
-
-                            <details class="p-2 rounded">
-                                <summary class="fw-medium">¿Puedo cancelar mi cita?</summary>
-                                <p class="small mt-2 mb-0 text-muted">Sí, avísanos con un par de horas de anticipación.
-                                </p>
-                            </details>
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
                         </div>
-                    </div>
 
+                        <div class="campo">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="servicio">Servicio de interés</label>
+                            <select id="servicio" name="servicio">
+                                <option value="corte">Corte de cabello</option>
+                                <option value="barba">Arreglo y diseño de barba</option>
+                                <option value="afeitado">Afeitado clásico</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        </div>
+
+                        <button type="submit" class="boton boton-dorado">Enviar mensaje</button>
+                    </form>
                 </div>
+
+                <aside class="horarios" aria-label="Horarios de atención">
+                    <h3>Horario de atención</h3>
+                    <dl>
+                        <div><dt>Lunes a viernes</dt><dd>9:00 a. m. – 8:00 p. m.</dd></div>
+                        <div><dt>Sábados</dt><dd>9:00 a. m. – 6:00 p. m.</dd></div>
+                        <div><dt>Domingos</dt><dd>10:00 a. m. – 3:00 p. m.</dd></div>
+                    </dl>
+
+                    <h3>Preguntas frecuentes</h3>
+                    <details>
+                        <summary>¿Necesito reservar cita?</summary>
+                        <p>Recomendamos reservar, pero también atendemos por orden de llegada.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cuánto dura un corte?</summary>
+                        <p>Entre 30 y 45 minutos, según el estilo que elijas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo cancelar mi cita?</summary>
+                        <p>Sí, avísanos con un par de horas de anticipación.</p>
+                    </details>
+                </aside>
+
             </div>
         </section>
 
     </main>
 
-    <!-- PIE DE PÁGINA -->
+    <!-- PIE DE PÁGINA (mismo contenido que Inicio) -->
     <footer>
-        <div class="container">
-            <div class="row g-4">
+        <h2>Barbería Estilo Urbano</h2>
 
-                <div class="col-lg-4">
-                    <h2>Barbería Estilo Urbano</h2>
-                    <p>
-                        <strong>Nombre del proyecto:</strong>
-                        Sitio web de Barbería Estilo Urbano
-                    </p>
-                </div>
+        <h3>Autores del sitio web</h3>
 
-                <div class="col-sm-6 col-lg-4">
-                    <h3>Autores del sitio web</h3>
-                    <ul class="list-unstyled">
-                        <li>Soranny Cuesta</li>
-                        <li>Juan Perdomo</li>
-                        <li>Jhonatan Reyes</li>
-                        <li>Guido Majin</li>
-                    </ul>
-                </div>
+        <ul>
+            <li>Soranny Cuesta</li>
+            <li>Juan Perdomo</li>
+            <li>Jhonatan Reyes</li>
+            <li>Guido Majin</li>
+        </ul>
 
-                <div class="col-sm-6 col-lg-4">
-                    <p>
-                        <strong>Correo electrónico:</strong>
-                        <a href="mailto:contacto@estilourbano.example">contacto@estilourbano.example</a>
-                    </p>
-                </div>
+        <p>
+            <strong>Correo electrónico:</strong>
+            <a href="mailto:contacto@estilourbano.example">
+                contacto@estilourbano.example
+            </a>
+        </p>
 
-            </div>
+        <p>
+            <strong>Nombre del proyecto:</strong>
+            Sitio web de Barbería Estilo Urbano
+        </p>
 
-            <p class="copyright mt-4 pt-3 mb-0">
-                &copy; 2026 Barbería Estilo Urbano. Todos los derechos reservados.
-            </p>
-        </div>
+        <p>
+            &copy; 2026 Barbería Estilo Urbano. Todos los derechos reservados.
+        </p>
     </footer>
 
-    <!-- Bootstrap JS (necesario para el menú hamburguesa) -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
