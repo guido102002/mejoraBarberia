@@ -1,29 +1,62 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es" data-bs-theme="dark">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Barbería Estilo Urbano | Inicio</title>
+
+    <!-- Fuentes -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+
+    <!-- Bootstrap CSS (debe ir ANTES de styles.css) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Estilos propios (después de Bootstrap para poder personalizarlo) -->
     <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>
+<body class="pagina-inicio">
 
-    <header>
-        <div class="marca">
-            <h1>Barbería Estilo Urbano</h1>
-            <p>Tu estilo, tu personalidad, tu mejor versión.</p>
-        </div>
-        <nav aria-label="Menú principal">
-            <ul>
-                <li><a href="index.html" aria-current="page">Inicio</a></li>
-                <li><a href="index-somos.html">Quiénes somos</a></li>
-                <li><a href="contacto.html">Contacto</a></li>
-            </ul>
+    <!-- ENCABEZADO + NAVBAR DE BOOTSTRAP -->
+    <header class="sticky-top">
+        <nav class="navbar navbar-expand-md" data-bs-theme="dark" aria-label="Menú principal">
+            <div class="container">
+
+                <div class="marca">
+                    <h1>Barbería Estilo Urbano</h1>
+                    <p>Tu estilo, tu personalidad, tu mejor versión.</p>
+                </div>
+
+                <button
+                    class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menuPrincipal"
+                    aria-controls="menuPrincipal"
+                    aria-expanded="false"
+                    aria-label="Abrir o cerrar el menú"
+                >
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse justify-content-md-end" id="menuPrincipal">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active" href="index.html" aria-current="page">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="index-somos.html">Quiénes somos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="contacto.html">Contacto</a>
+                        </li>
+                    </ul>
+                </div>
+
+            </div>
         </nav>
     </header>
 
@@ -31,38 +64,43 @@
 
         <!-- PRESENTACIÓN -->
         <section class="portada">
-            <div class="contenedor hero-grid">
-                <div>
-                    <p class="etiqueta">Barbería de autor</p>
-                    <h2>Bienvenidos a Barbería Estilo Urbano</h2>
-                    <p>
-                        En Barbería Estilo Urbano creemos que un buen corte de cabello
-                        es mucho más que una apariencia: es una forma de expresar
-                        tu personalidad y sentirte seguro de ti mismo.
-                    </p>
-                    <p>
-                        Somos un espacio dedicado al cuidado masculino, donde combinamos
-                        técnicas tradicionales de barbería con las últimas tendencias
-                        en cortes, estilos y cuidado de la barba.
-                    </p>
-                    <p class="intro">
-                        Nuestro objetivo es ofrecer una experiencia cómoda, cercana
-                        y profesional para que cada cliente encuentre el estilo
-                        que mejor lo representa.
-                    </p>
-                    <a class="boton boton-dorado" href="contacto.html">Reservar cita</a>
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <p class="etiqueta">Barbería de autor</p>
+                        <h2>Bienvenidos a Barbería Estilo Urbano</h2>
+                        <p>
+                            En Barbería Estilo Urbano creemos que un buen corte de cabello
+                            es mucho más que una apariencia: es una forma de expresar
+                            tu personalidad y sentirte seguro de ti mismo.
+                        </p>
+                        <p>
+                            Somos un espacio dedicado al cuidado masculino, donde combinamos
+                            técnicas tradicionales de barbería con las últimas tendencias
+                            en cortes, estilos y cuidado de la barba.
+                        </p>
+                        <p class="intro">
+                            Nuestro objetivo es ofrecer una experiencia cómoda, cercana
+                            y profesional para que cada cliente encuentre el estilo
+                            que mejor lo representa.
+                        </p>
+                        <a class="btn btn-dorado" href="contacto.html">Reservar cita</a>
+                    </div>
+                    <div class="col-lg-6">
+                        <img
+                            class="img-fluid imagen-lateral"
+                            src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80"
+                            alt="Interior de una barbería con sillas y espejos"
+                            width="600"
+                        >
+                    </div>
                 </div>
-                <img
-                    src="https://images.unsplash.com/photo-1503951914875-452162b0f3f1?auto=format&fit=crop&w=1000&q=80"
-                    alt="Interior de una barbería con sillas y espejos"
-                    width="600"
-                >
             </div>
         </section>
 
         <!-- SERVICIOS -->
         <section class="medios">
-            <div class="contenedor">
+            <div class="container">
                 <p class="etiqueta">Servicios</p>
                 <h2>Nuestros servicios</h2>
                 <p class="intro">
@@ -70,105 +108,131 @@
                     una imagen impecable y un estilo que se adapte a ti.
                 </p>
 
-                <div class="tarjetas">
-                    <article class="tarjeta">
-                        <img
-                            src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
-                            alt="Barbero realizando un corte de cabello"
-                            width="400"
-                        >
-                        <h3>Cortes de cabello</h3>
-                        <p>
-                            Realizamos cortes clásicos y modernos, degradados,
-                            low fade, mid fade, high fade y otros estilos
-                            personalizados según tus preferencias.
-                        </p>
-                    </article>
+                <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 mt-2">
+                    <div class="col">
+                        <article class="card tarjeta h-100">
+                            <img
+                                class="card-img-top"
+                                src="https://images.unsplash.com/photo-1621605815971-fbc98d665033?auto=format&fit=crop&w=800&q=80"
+                                alt="Barbero realizando un corte de cabello"
+                                width="400"
+                            >
+                            <div class="card-body">
+                                <h3 class="card-title">Cortes de cabello</h3>
+                                <p class="card-text">
+                                    Realizamos cortes clásicos y modernos, degradados,
+                                    low fade, mid fade, high fade y otros estilos
+                                    personalizados según tus preferencias.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <article class="tarjeta">
-                        <img
-                            src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
-                            alt="Barbero trabajando en el arreglo de la barba"
-                            width="400"
-                        >
-                        <h3>Arreglo y diseño de barba</h3>
-                        <p>
-                            Damos forma a tu barba con técnicas de perfilado
-                            y arreglo para conseguir un resultado limpio,
-                            definido y acorde con tu rostro.
-                        </p>
-                    </article>
+                    <div class="col">
+                        <article class="card tarjeta h-100">
+                            <img
+                                class="card-img-top"
+                                src="https://images.unsplash.com/photo-1622286342621-4bd786c2447c?auto=format&fit=crop&w=800&q=80"
+                                alt="Barbero trabajando en el arreglo de la barba"
+                                width="400"
+                            >
+                            <div class="card-body">
+                                <h3 class="card-title">Arreglo y diseño de barba</h3>
+                                <p class="card-text">
+                                    Damos forma a tu barba con técnicas de perfilado
+                                    y arreglo para conseguir un resultado limpio,
+                                    definido y acorde con tu rostro.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
 
-                    <article class="tarjeta">
-                        <img
-                            src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
-                            alt="Herramientas profesionales utilizadas en barbería"
-                            width="400"
-                        >
-                        <h3>Afeitado clásico</h3>
-                        <p>
-                            Disfruta de un afeitado cuidadoso y de una experiencia
-                            tradicional de barbería, con atención a los detalles
-                            y al cuidado de la piel.
-                        </p>
-                    </article>
+                    <div class="col">
+                        <article class="card tarjeta h-100">
+                            <img
+                                class="card-img-top"
+                                src="https://images.unsplash.com/photo-1599351431202-1e0f0137899a?auto=format&fit=crop&w=800&q=80"
+                                alt="Herramientas profesionales utilizadas en barbería"
+                                width="400"
+                            >
+                            <div class="card-body">
+                                <h3 class="card-title">Afeitado clásico</h3>
+                                <p class="card-text">
+                                    Disfruta de un afeitado cuidadoso y de una experiencia
+                                    tradicional de barbería, con atención a los detalles
+                                    y al cuidado de la piel.
+                                </p>
+                            </div>
+                        </article>
+                    </div>
                 </div>
             </div>
         </section>
 
         <!-- TENDENCIAS -->
         <section class="tendencias">
-            <div class="contenedor dos-columnas">
-                <div>
-                    <p class="etiqueta">Tendencias</p>
-                    <h2>Tendencias en cortes masculinos</h2>
-                    <p>
-                        La barbería evoluciona constantemente y cada temporada
-                        aparecen nuevos estilos. Los degradados, los cortes
-                        texturizados, los estilos clásicos y los diseños
-                        personalizados siguen siendo opciones populares.
-                    </p>
-                    <h3>Encuentra el estilo que va contigo</h3>
-                    <p>
-                        Elegir un corte depende de tus gustos, tu tipo de cabello,
-                        la forma de tu rostro y el tiempo que deseas dedicar
-                        al mantenimiento diario.
-                    </p>
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-6">
+                        <p class="etiqueta">Tendencias</p>
+                        <h2>Tendencias en cortes masculinos</h2>
+                        <p>
+                            La barbería evoluciona constantemente y cada temporada
+                            aparecen nuevos estilos. Los degradados, los cortes
+                            texturizados, los estilos clásicos y los diseños
+                            personalizados siguen siendo opciones populares.
+                        </p>
+                        <h3>Encuentra el estilo que va contigo</h3>
+                        <p>
+                            Elegir un corte depende de tus gustos, tu tipo de cabello,
+                            la forma de tu rostro y el tiempo que deseas dedicar
+                            al mantenimiento diario.
+                        </p>
+                    </div>
+                    <div class="col-lg-6">
+                        <img
+                            class="img-fluid imagen-lateral"
+                            src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?auto=format&fit=crop&w=1000&q=80"
+                            alt="Barbero trabajando en un estilo de cabello masculino"
+                            width="600"
+                            loading="lazy"
+                        >
+                    </div>
                 </div>
-                <img
-                    class="imagen-lateral"
-                    src="https://images.unsplash.com/photo-1593702275687-f8b402bf1fb5?auto=format&fit=crop&w=1000&q=80"
-                    alt="Barbero trabajando en un estilo de cabello masculino"
-                    width="600"
-                >
             </div>
         </section>
 
         <!-- POR QUÉ ELEGIRNOS -->
         <section class="elegirnos">
-            <div class="contenedor">
-                <p class="etiqueta">Ventajas</p>
-                <h2>¿Por qué elegirnos?</h2>
-                <ul>
-                    <li>Atención personalizada para cada cliente.</li>
-                    <li>Herramientas y equipos de barbería profesionales.</li>
-                    <li>Interés por las nuevas tendencias y técnicas.</li>
-                    <li>Un ambiente cómodo para disfrutar de tu visita.</li>
-                    <li>Compromiso con la higiene y el cuidado personal.</li>
-                </ul>
-                <p class="intro">
-                    En Barbería Estilo Urbano, cada detalle cuenta.
-                    Queremos que salgas satisfecho con tu imagen y con
-                    ganas de volver.
-                </p>
+            <div class="container">
+                <div class="row align-items-center g-5">
+                    <div class="col-lg-5">
+                        <p class="etiqueta">Ventajas</p>
+                        <h2>¿Por qué elegirnos?</h2>
+                        <p class="intro mb-0">
+                            En Barbería Estilo Urbano, cada detalle cuenta.
+                            Queremos que salgas satisfecho con tu imagen y con
+                            ganas de volver.
+                        </p>
+                    </div>
+                    <div class="col-lg-7">
+                        <ul class="list-group list-group-flush">
+                            <li class="list-group-item">Atención personalizada para cada cliente.</li>
+                            <li class="list-group-item">Herramientas y equipos de barbería profesionales.</li>
+                            <li class="list-group-item">Interés por las nuevas tendencias y técnicas.</li>
+                            <li class="list-group-item">Un ambiente cómodo para disfrutar de tu visita.</li>
+                            <li class="list-group-item">Compromiso con la higiene y el cuidado personal.</li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </section>
 
         <!-- INVITACIÓN -->
         <section class="invitacion">
-            <div class="contenedor">
+            <div class="container text-center">
                 <h2>¡Es momento de renovar tu estilo!</h2>
-                <p class="intro">
+                <p class="intro mx-auto">
                     Ven a conocernos y descubre cómo un buen corte puede
                     marcar la diferencia. Estamos aquí para ayudarte
                     a encontrar tu mejor versión.
@@ -182,28 +246,46 @@
 
     </main>
 
+    <!-- PIE DE PÁGINA -->
     <footer>
-        <h2>Barbería Estilo Urbano</h2>
-        <h3>Autores del sitio web</h3>
-        <ul>
-            <li>Soranny Cuesta</li>
-            <li>Juan Perdomo</li>
-            <li>Jhonatan Reyes</li>
-            <li>Guido Majin</li>
-        </ul>
-        <p>
-            <strong>Correo electrónico:</strong>
-            <a href="mailto:contacto@estilourbano.example">contacto@estilourbano.example</a>
-        </p>
-        <p>
-            <strong>Nombre del proyecto:</strong>
-            Sitio web de Barbería Estilo Urbano
-        </p>
-        <p>
-            &copy; 2026 Barbería Estilo Urbano. Todos los derechos reservados.
-        </p>
+        <div class="container">
+            <div class="row g-4">
+
+                <div class="col-lg-4">
+                    <h2>Barbería Estilo Urbano</h2>
+                    <p>
+                        <strong>Nombre del proyecto:</strong>
+                        Sitio web de Barbería Estilo Urbano
+                    </p>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <h3>Autores del sitio web</h3>
+                    <ul class="list-unstyled">
+                        <li>Soranny Cuesta</li>
+                        <li>Juan Perdomo</li>
+                        <li>Jhonatan Reyes</li>
+                        <li>Guido Majin</li>
+                    </ul>
+                </div>
+
+                <div class="col-sm-6 col-lg-4">
+                    <p>
+                        <strong>Correo electrónico:</strong>
+                        <a href="mailto:contacto@estilourbano.example">contacto@estilourbano.example</a>
+                    </p>
+                </div>
+
+            </div>
+
+            <p class="copyright mt-4 pt-3 mb-0">
+                &copy; 2026 Barbería Estilo Urbano. Todos los derechos reservados.
+            </p>
+        </div>
     </footer>
 
+    <!-- Bootstrap JS (necesario para el menú hamburguesa) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
