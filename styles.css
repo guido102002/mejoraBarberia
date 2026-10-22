@@ -1,9 +1,3 @@
-/* =========================================================
-   Barbería Estilo Urbano — estilos de la página CONTACTO
-   Paleta y tipografías alineadas con el diseño de Inicio:
-   fondo oscuro, acento dorado, títulos serif, texto sans.
-   ========================================================= */
-
 :root {
     --fondo: #141210;
     --fondo-seccion: #1b1a19;
@@ -260,3 +254,119 @@ body > footer p:last-child { margin-top: 1.5rem; padding-top: 1rem; border-top: 
     .hero-grid { grid-template-columns: 1fr; gap: 2rem; }
     .tendencias, .somos-detalle, .invitacion, .elegirnos { padding: 3.5rem 0; }
 }
+
+/* =========================================================
+   INICIO — AJUSTES PARA BOOTSTRAP
+   Todo va dentro de body.pagina-inicio para que NO afecte
+   a index-somos.html ni a contacto.html.
+   ========================================================= */
+
+/* ---------- Contenedor ---------- */
+body.pagina-inicio .container {
+    max-width: 1100px;
+    --bs-gutter-x: 2.5rem; /* mismo padding lateral de 1.25rem que antes */
+}
+
+/* ---------- Header + Navbar ---------- */
+body.pagina-inicio > header {
+    display: block;
+    padding: 0;
+    text-align: left;
+}
+body.pagina-inicio .navbar {
+    --bs-navbar-padding-y: 0.8rem;
+    --bs-navbar-padding-x: 0;
+}
+body.pagina-inicio .navbar-nav { gap: 0.5rem; }
+body.pagina-inicio .navbar .nav-link {
+    padding: 0.5rem 0.9rem;
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: var(--texto-suave);
+    border-bottom: 2px solid transparent;
+}
+body.pagina-inicio .navbar .nav-link:hover,
+body.pagina-inicio .navbar .nav-link:focus { color: var(--texto); }
+body.pagina-inicio .navbar .nav-link.active,
+body.pagina-inicio .navbar .nav-link[aria-current="page"] {
+    color: var(--dorado);
+    border-bottom-color: var(--dorado);
+}
+
+/* Botón hamburguesa (móvil) */
+body.pagina-inicio .navbar-toggler {
+    --bs-navbar-toggler-border-color: var(--borde);
+    border-radius: 2px;
+}
+body.pagina-inicio .navbar-toggler:focus {
+    box-shadow: 0 0 0 0.15rem rgba(212, 169, 90, 0.45);
+}
+body.pagina-inicio .navbar-toggler:focus-visible {
+    outline: 2px solid var(--dorado);
+    outline-offset: 3px;
+}
+
+@media (max-width: 767.98px) {
+    body.pagina-inicio .navbar-collapse { padding-top: 0.8rem; }
+    body.pagina-inicio .navbar-nav { gap: 0; }
+}
+
+/* ---------- Portada ---------- */
+body.pagina-inicio .portada h2 { margin-bottom: 1.2rem; }
+body.pagina-inicio .portada .intro { margin-bottom: 1.8rem; }
+
+/* ---------- Botón dorado (btn de Bootstrap personalizado) ---------- */
+body.pagina-inicio .btn-dorado {
+    --bs-btn-color: #1a1610;
+    --bs-btn-bg: var(--dorado);
+    --bs-btn-border-color: var(--dorado);
+    --bs-btn-hover-color: #1a1610;
+    --bs-btn-hover-bg: #ecc885;
+    --bs-btn-hover-border-color: #ecc885;
+    --bs-btn-active-color: #1a1610;
+    --bs-btn-active-bg: #ecc885;
+    --bs-btn-active-border-color: #ecc885;
+    --bs-btn-focus-shadow-rgb: 212, 169, 90;
+    --bs-btn-border-radius: 2px;
+    padding: 0.8rem 1.6rem;
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+}
+
+/* ---------- Tarjetas de servicios (card de Bootstrap) ---------- */
+body.pagina-inicio .card {
+    --bs-card-bg: var(--fondo-tarjeta);
+    --bs-card-color: var(--texto-suave);
+    --bs-card-border-color: var(--borde);
+    --bs-card-title-color: var(--dorado);
+    --bs-card-border-radius: 0;
+    --bs-card-inner-border-radius: 0;
+}
+body.pagina-inicio .tarjeta { padding: 0; }
+body.pagina-inicio .tarjeta .card-img-top { margin-bottom: 0; }
+body.pagina-inicio .tarjeta .card-body { padding: 1.6rem; }
+body.pagina-inicio .tarjeta .card-title { margin-top: 0; margin-bottom: 0.6rem; }
+body.pagina-inicio .tarjeta .card-text { margin-bottom: 0; }
+
+/* ---------- ¿Por qué elegirnos? (list-group de Bootstrap) ---------- */
+body.pagina-inicio .elegirnos .list-group {
+    --bs-list-group-bg: transparent;
+    --bs-list-group-color: var(--texto);
+    --bs-list-group-border-color: var(--borde);
+    max-width: none;
+    margin: 0;
+}
+
+/* ---------- Footer (grid de Bootstrap) ---------- */
+body.pagina-inicio > footer { padding: 3rem 0 2rem; }
+body.pagina-inicio > footer .row p:last-child {
+    margin-top: 0;
+    padding-top: 0;
+    border-top: 0;
+    font-size: inherit;
+}
+body.pagina-inicio > footer .list-unstyled { margin-bottom: 0; }
+body.pagina-inicio > footer h3:first-child { margin-top: 0; }
