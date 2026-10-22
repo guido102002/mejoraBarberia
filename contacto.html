@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barbería Estilo Urbano | Contacto</title>
+    <meta name="description" content="Escríbenos, llámanos o reserva tu cita en Barbería Estilo Urbano.">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+    <!-- ENCABEZADO (misma estructura que Inicio) -->
+    <header>
+        <div class="marca">
+            <h1>Barbería Estilo Urbano</h1>
+            <p>Tu estilo, tu personalidad, tu mejor versión.</p>
+        </div>
+
+        <!-- MENÚ DE NAVEGACIÓN -->
+        <nav aria-label="Menú principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index-somos.html">Quiénes somos</a></li>
+                <li><a href="contacto.html" aria-current="page">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+
+        <!-- PRESENTACIÓN DE CONTACTO -->
+        <section class="portada">
+            <div class="contenedor">
+                <p class="etiqueta">Contacto</p>
+                <h2>Hablemos de tu <em>próximo corte</em></h2>
+                <p class="intro">
+                    ¿Quieres reservar una cita, resolver una duda o conocer más
+                    sobre nuestros servicios? Escríbenos o llámanos y te
+                    responderemos lo antes posible.
+                </p>
+                <div class="acciones">
+                    <a class="boton boton-dorado" href="#formulario">Escribir un mensaje</a>
+                    <a class="boton boton-borde" href="tel:+573000000000">Llamar ahora</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- MEDIOS DE CONTACTO -->
+        <section class="medios">
+            <div class="contenedor">
+                <p class="etiqueta">Dónde encontrarnos</p>
+                <h2>Elige cómo comunicarte</h2>
+
+                <div class="tarjetas">
+                    <article class="tarjeta">
+                        <h3>Correo electrónico</h3>
+                        <p><a href="mailto:contacto@estilourbano.example">contacto@estilourbano.example</a></p>
+                        <p class="nota">Respondemos en menos de 24 horas.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Teléfono</h3>
+                        <p><a href="tel:+573000000000">+57 300 000 0000</a></p>
+                        <p class="nota">Para reservas y consultas rápidas.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>WhatsApp</h3>
+                        <p><a href="https://wa.me/573000000001">+57 300 000 0001</a></p>
+                        <p class="nota">Escríbenos cuando quieras.</p>
+                    </article>
+
+                    <article class="tarjeta">
+                        <h3>Dirección</h3>
+                        <p>Calle 00 # 00-00, Local 1</p>
+                        <p class="nota">Ciudad, Colombia (dirección de ejemplo).</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <!-- FORMULARIO Y HORARIOS -->
+        <section class="formulario-seccion" id="formulario">
+            <div class="contenedor dos-columnas">
+
+                <div>
+                    <p class="etiqueta">Escríbenos</p>
+                    <h2>Envíanos un mensaje</h2>
+                    <p class="intro">
+                        Cuéntanos qué servicio te interesa y en qué horario
+                        prefieres venir. Nosotros te confirmamos la cita.
+                    </p>
+
+                    <form action="#" method="post">
+                        <div class="campo">
+                            <label for="nombre">Nombre</label>
+                            <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="correo">Correo electrónico</label>
+                            <input type="email" id="correo" name="correo" placeholder="tucorreo@ejemplo.com" required>
+                        </div>
+
+                        <div class="campo">
+                            <label for="servicio">Servicio de interés</label>
+                            <select id="servicio" name="servicio">
+                                <option value="corte">Corte de cabello</option>
+                                <option value="barba">Arreglo y diseño de barba</option>
+                                <option value="afeitado">Afeitado clásico</option>
+                                <option value="otro">Otro</option>
+                            </select>
+                        </div>
+
+                        <div class="campo">
+                            <label for="mensaje">Mensaje</label>
+                            <textarea id="mensaje" name="mensaje" placeholder="Escribe tu mensaje aquí" required></textarea>
+                        </div>
+
+                        <button type="submit" class="boton boton-dorado">Enviar mensaje</button>
+                    </form>
+                </div>
+
+                <aside class="horarios" aria-label="Horarios de atención">
+                    <h3>Horario de atención</h3>
+                    <dl>
+                        <div><dt>Lunes a viernes</dt><dd>9:00 a. m. – 8:00 p. m.</dd></div>
+                        <div><dt>Sábados</dt><dd>9:00 a. m. – 6:00 p. m.</dd></div>
+                        <div><dt>Domingos</dt><dd>10:00 a. m. – 3:00 p. m.</dd></div>
+                    </dl>
+
+                    <h3>Preguntas frecuentes</h3>
+                    <details>
+                        <summary>¿Necesito reservar cita?</summary>
+                        <p>Recomendamos reservar, pero también atendemos por orden de llegada.</p>
+                    </details>
+                    <details>
+                        <summary>¿Cuánto dura un corte?</summary>
+                        <p>Entre 30 y 45 minutos, según el estilo que elijas.</p>
+                    </details>
+                    <details>
+                        <summary>¿Puedo cancelar mi cita?</summary>
+                        <p>Sí, avísanos con un par de horas de anticipación.</p>
+                    </details>
+                </aside>
+
+            </div>
+        </section>
+
+    </main>
+
+    <!-- PIE DE PÁGINA (mismo contenido que Inicio) -->
+    <footer>
+        <h2>Barbería Estilo Urbano</h2>
+
+        <h3>Autores del sitio web</h3>
+
+        <ul>
+            <li>Soranny Cuesta</li>
+            <li>Juan Perdomo</li>
+            <li>Jhonatan Reyes</li>
+            <li>Guido Majin</li>
+        </ul>
+
+        <p>
+            <strong>Correo electrónico:</strong>
+            <a href="mailto:contacto@estilourbano.example">
+                contacto@estilourbano.example
+            </a>
+        </p>
+
+        <p>
+            <strong>Nombre del proyecto:</strong>
+            Sitio web de Barbería Estilo Urbano
+        </p>
+
+        <p>
+            &copy; 2026 Barbería Estilo Urbano. Todos los derechos reservados.
+        </p>
+    </footer>
+
+</body>
+
+</html>
